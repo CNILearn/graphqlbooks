@@ -1,4 +1,4 @@
-# GraphQL Books Sample - Hot Chocolate
+# GraphQL Books Sample - [Hot Chocolate](https://github.com/chilliCream/graphql-platform/)
 
 Sebastian Szvetecz - CN innovation - sebastian.szvetecz@cninnovation.com
 
