@@ -1,17 +1,21 @@
 using BookSample.ReviewAPI.Data.Repositories;
-using BookSample.ReviewAPI.Parameters;
 using Microsoft.AspNetCore.Mvc;
 
 var builder = WebApplication.CreateBuilder(args);
 
+// Aspire
+builder.AddServiceDefaults();
+
+// Swagger / OpenAPI
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
+// Register the ReviewRepository
 builder.Services.AddSingleton<ReviewRepository>();
 
 var app = builder.Build();
 
-app.MapGet("/api/reviews", (BookIdsParameter bookIdsParameter, [FromQuery] int? take, [FromServices] ReviewRepository repo) =>
+// Endpoints
 app.MapGet("/api/reviews", ([FromQuery] string[] bookIds, [FromQuery] int? take, [FromServices] ReviewRepository repo) =>
 {
     return repo.GetReviews(bookIds.ParseLongsSafely(), take);
@@ -28,7 +32,11 @@ app.MapGet("/api/ratings", ([FromQuery] string[] bookIds, [FromServices] ReviewR
 .WithName("GetRatings")
 .WithOpenApi();
 
+// Swagger / OpenAPI
 app.UseSwagger();
 app.UseSwaggerUI();
+
+// Aspire
+app.MapDefaultEndpoints();
 
 app.Run();

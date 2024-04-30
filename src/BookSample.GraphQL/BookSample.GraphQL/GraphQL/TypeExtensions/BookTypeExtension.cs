@@ -1,7 +1,7 @@
 ﻿using BookSample.Data.Models;
 using BookSample.GraphQL.GraphQL.DataLoader;
 using BookSample.ReviewApiClient;
-using BookSample.ReviewAPIClient.Models;
+using BookSample.ReviewApiClient.Models;
 
 namespace BookSample.GraphQL.GraphQL.TypeExtensions;
 

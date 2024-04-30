@@ -12,4 +12,8 @@
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.5.0" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\BookSample.Aspire\BookSample.Aspire.ServiceDefaults\BookSample.Aspire.ServiceDefaults.csproj" />
+  </ItemGroup>
+
 </Project>

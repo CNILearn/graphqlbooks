@@ -8,6 +8,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="Aspire.Npgsql.EntityFrameworkCore.PostgreSQL" Version="8.0.0-preview.5.24201.12" />
     <PackageReference Include="HotChocolate.AspNetCore" Version="13.9.0" />
     <PackageReference Include="HotChocolate.Types.Analyzers" Version="13.9.0" />
     <PackageReference Include="HotChocolate.Data.EntityFramework" Version="13.9.0" />
@@ -19,6 +20,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\..\BookSample.Aspire\BookSample.Aspire.ServiceDefaults\BookSample.Aspire.ServiceDefaults.csproj" />
     <ProjectReference Include="..\BookSample.Data\BookSample.Data.csproj" />
     <ProjectReference Include="..\BookSample.ReviewApiClient\BookSample.ReviewApiClient.csproj" />
   </ItemGroup>
