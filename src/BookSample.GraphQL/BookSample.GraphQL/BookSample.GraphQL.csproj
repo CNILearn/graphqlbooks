@@ -20,7 +20,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\BookSample.Data\BookSample.Data.csproj" />
-    <ProjectReference Include="..\BookSample.ReviewAPIClient\BookSample.ReviewAPIClient.csproj" />
+    <ProjectReference Include="..\BookSample.ReviewApiClient\BookSample.ReviewApiClient.csproj" />
   </ItemGroup>
 
 </Project>

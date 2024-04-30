@@ -1,10 +1,10 @@
 {
-  "descriptionHash": "EA258550750B4DD3903E37A8EEEAB5A308C92D2634C7AF110F338BD7DB52448CFDEF8C72F2D10E302D39A0666CDB444E983CEF8CB4F05D0F63D641635FC44303",
-  "descriptionLocation": "https://localhost:7078/swagger/v1/swagger.json",
+  "descriptionHash": "9B8CDDB8DF4E63CA19B553840C428F029C253FA0671504DE51CBFD21034F4760F8A9715EB65A957FB8D90513E2407F1B74C743CC2875ABDF0D4D535730D04E52",
+  "descriptionLocation": "https://localhost:7079/swagger/v1/swagger.json",
   "lockFileVersion": "1.0.0",
   "kiotaVersion": "1.13.0",
   "clientClassName": "ReviewClient",
-  "clientNamespaceName": "BookSample.ReviewAPIClient",
+  "clientNamespaceName": "BookSample.ReviewApiClient",
   "language": "CSharp",
   "usesBackingStore": false,
   "excludeBackwardCompatible": false,

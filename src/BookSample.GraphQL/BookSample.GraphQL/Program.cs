@@ -1,6 +1,6 @@
 using BookSample.Data.Database;
 using BookSample.GraphQL.GraphQL;
-using BookSample.ReviewAPIClient;
+using BookSample.ReviewApiClient;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Kiota.Abstractions.Authentication;
 using Microsoft.Kiota.Abstractions;

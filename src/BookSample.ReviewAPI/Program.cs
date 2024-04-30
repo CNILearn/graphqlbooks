@@ -5,28 +5,24 @@ using Microsoft.AspNetCore.Mvc;
 var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddEndpointsApiExplorer();
-builder.Services.AddSwaggerGen(setup =>
-{
-    setup.AddServer(new(){
-        Url = "https://localhost:7078"
-    });
-});
+builder.Services.AddSwaggerGen();
 
 builder.Services.AddSingleton<ReviewRepository>();
 
 var app = builder.Build();
 
 app.MapGet("/api/reviews", (BookIdsParameter bookIdsParameter, [FromQuery] int? take, [FromServices] ReviewRepository repo) =>
+app.MapGet("/api/reviews", ([FromQuery] string[] bookIds, [FromQuery] int? take, [FromServices] ReviewRepository repo) =>
 {
-    return repo.GetReviews(bookIdsParameter.BookIds, take);
+    return repo.GetReviews(bookIds.ParseLongsSafely(), take);
 })
 .WithTags("Reviews")
 .WithName("GetReviews")
 .WithOpenApi();
 
-app.MapGet("/api/ratings", (BookIdsParameter bookIdsParameter, [FromServices] ReviewRepository repo) =>
+app.MapGet("/api/ratings", ([FromQuery] string[] bookIds, [FromServices] ReviewRepository repo) =>
 {
-    return repo.GetRatings(bookIdsParameter.BookIds);
+    return repo.GetRatings(bookIds.ParseLongsSafely());
 })
 .WithTags("Ratings")
 .WithName("GetRatings")

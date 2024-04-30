@@ -1,6 +1,6 @@
 ﻿using BookSample.Data.Models;
 using BookSample.GraphQL.GraphQL.DataLoader;
-using BookSample.ReviewAPIClient;
+using BookSample.ReviewApiClient;
 using BookSample.ReviewAPIClient.Models;
 
 namespace BookSample.GraphQL.GraphQL.TypeExtensions;
@@ -41,7 +41,7 @@ internal class BookTypeExtension
     [DataLoader(AccessModifier = DataLoaderAccessModifier.PublicInterface)]
     internal static async Task<IReadOnlyDictionary<long, Rating>> RatingById(IReadOnlyList<long> bookIds, ReviewClient reviewClient, CancellationToken cancellationToken)
     {
-        var parameterQueryIds = bookIds.Select(x => (long?)x).ToArray();
+        var parameterQueryIds = bookIds.Select(x => x.ToString()).ToArray();
         var result = await reviewClient.Api
             .Ratings
             .GetAsync(x => x.QueryParameters.BookIds = parameterQueryIds, cancellationToken);
