@@ -12,7 +12,7 @@ var builder = Host.CreateApplicationBuilder(args);
 // Aspire
 builder.AddServiceDefaults();
 
-// EFCore
+// EF Core with Aspire component
 builder.AddNpgsqlDbContext<BookDbContext>("books");
 
 var host = builder.Build();
