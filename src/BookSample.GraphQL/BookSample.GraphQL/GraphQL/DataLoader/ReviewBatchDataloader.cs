@@ -1,5 +1,5 @@
-﻿using BookSample.ReviewAPIClient;
-using BookSample.ReviewAPIClient.Models;
+﻿using BookSample.ReviewApiClient;
+using BookSample.ReviewApiClient.Models;
 
 namespace BookSample.GraphQL.GraphQL.DataLoader;
 
@@ -12,7 +12,7 @@ internal class ReviewBatchDataloader(ReviewClient reviewClient, IBatchScheduler 
 
     protected override async Task<IReadOnlyDictionary<long, IEnumerable<Review>>> LoadBatchAsync(IReadOnlyList<long> bookIds, CancellationToken cancellationToken)
     {
-        var parameterQueryIds = bookIds.Select(x => (long?)x).ToArray();
+        var parameterQueryIds = bookIds.Select(x => x.ToString()).ToArray();
         var result = await reviewClient.Api
             .Reviews
             .GetAsync(config =>

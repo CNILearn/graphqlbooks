@@ -12,7 +12,7 @@ The /src directory contains the source code for the project.
   - **BookSample.Data**\
     This project contains the data access layer. It uses Entity Framework Core to interact with the database.\
     It is used by the GraphQL API to fetch data from the database.
-  - **BookSample.ReviewAPIClient**\
+  - **BookSample.ReviewApiClient**\
     This project contains a client for the ReviewAPI. It uses HttpClient to make HTTP requests to the ReviewAPI. [Kiota](https://learn.microsoft.com/en-us/openapi/kiota/overview) is used to generate the client code.\
     It is used by the GraphQL API to fetch reviews and ratings for books.
 - **BookSample.ReviewAPI** (BookSample.ReviewAPI.sln)\
@@ -31,3 +31,34 @@ graph LR
 
     style A stroke-width:2px,stroke-dasharray: 10 5
 ```
+
+- **BookSample.Aspire** (BookSample.Aspire.sln)
+  In this sample application [Aspire](https://learn.microsoft.com/en-us/dotnet/aspire/get-started/aspire-overview) is used to improve, among others, the development experience.
+
+  In _BookSample.Aspire.AppHost_ the following components are configured:
+  - **Database**
+    A PostgreSQL database is used to store the data. In Development mode, Aspire will use a Docker container to run the database.
+    So an installation of PostgreSQL is not required.
+  - **Database-Seeder**
+    The database seeder is used to seed the database with sample data.
+  - **Reviews-API**
+    The Review API as described above.
+  - **GraphQL-API**
+    The GraphQL API as described above.
+
+## Getting Started
+
+For running the application including all components, the following steps are required:
+- Install [Docker Desktop](https://www.docker.com/products/docker-desktop/)
+- Open your command-line and navigate to the root directory of the repository `cd [the directory of the cloned repo]`
+- Install the [Aspire Workload](https://learn.microsoft.com/en-us/dotnet/aspire/fundamentals/setup-tooling) by running `dotnet workload install aspire --version 8.0.0-preview.5.24201.12` in the command-line \
+  In this sample application we currently use the preview-version 5 of Aspire.
+  Make sure that the versions of the Aspire-workload and the installed Aspire-Nuget-packages are matching.
+- Run the following commands in the command-line:
+  - `cd ./src/BookSample.Aspire/BookSample.Aspire.AppHost`
+  - `dotnet run`
+- After starting the Aspire AppHost, the following services are available:
+  - **Aspire Dashboard**: [https://localhost:17054](https://localhost:17054)
+  - **GraphQL API and GraphQL Playground**: [https://localhost:7089/graphql](https://localhost:7089/graphql)
+  - **Reviews API**: [https://localhost:7079/reviews](https://localhost:7079/reviews)
+- Open [https://localhost:7089/graphql](https://localhost:7089/graphql) in your browser to test the first GraphQL queries, mutations, and subscriptions in the GraphQL Playground.

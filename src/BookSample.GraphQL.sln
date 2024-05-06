@@ -7,7 +7,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BookSample.GraphQL", "BookS
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BookSample.Data", "BookSample.GraphQL\BookSample.Data\BookSample.Data.csproj", "{0A736F6B-44E8-4F91-92DC-961F7E8AEC6B}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BookSample.ReviewAPIClient", "BookSample.GraphQL\BookSample.ReviewAPIClient\BookSample.ReviewAPIClient.csproj", "{5F074131-FDB8-4D9B-9470-1C73DBFDD4CF}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BookSample.ReviewApiClient", "BookSample.GraphQL\BookSample.ReviewApiClient\BookSample.ReviewApiClient.csproj", "{E2145248-BC1B-4BF9-BFC6-A78CD2ECB0D7}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -23,10 +23,10 @@ Global
 		{0A736F6B-44E8-4F91-92DC-961F7E8AEC6B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0A736F6B-44E8-4F91-92DC-961F7E8AEC6B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0A736F6B-44E8-4F91-92DC-961F7E8AEC6B}.Release|Any CPU.Build.0 = Release|Any CPU
-		{5F074131-FDB8-4D9B-9470-1C73DBFDD4CF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{5F074131-FDB8-4D9B-9470-1C73DBFDD4CF}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{5F074131-FDB8-4D9B-9470-1C73DBFDD4CF}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{5F074131-FDB8-4D9B-9470-1C73DBFDD4CF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E2145248-BC1B-4BF9-BFC6-A78CD2ECB0D7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E2145248-BC1B-4BF9-BFC6-A78CD2ECB0D7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E2145248-BC1B-4BF9-BFC6-A78CD2ECB0D7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E2145248-BC1B-4BF9-BFC6-A78CD2ECB0D7}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

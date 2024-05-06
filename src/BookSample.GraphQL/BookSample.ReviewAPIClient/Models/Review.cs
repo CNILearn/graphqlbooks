@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System;
-namespace BookSample.ReviewAPIClient.Models {
+namespace BookSample.ReviewApiClient.Models {
     public class Review : IParsable 
     {
         /// <summary>The bookId property</summary>
