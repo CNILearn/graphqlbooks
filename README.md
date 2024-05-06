@@ -50,8 +50,12 @@ graph LR
 
 For running the application including all components, the following steps are required:
 - Install [Docker Desktop](https://www.docker.com/products/docker-desktop/)
+- Open your command-line and navigate to the root directory of the repository `cd [the directory of the cloned repo]`
+- Install the [Aspire Workload](https://learn.microsoft.com/en-us/dotnet/aspire/fundamentals/setup-tooling) by running `dotnet workload install aspire --version 8.0.0-preview.5.24201.12` in the command-line \
+  In this sample application we currently use the preview-version 5 of Aspire.
+  Make sure that the versions of the Aspire-workload and the installed Aspire-Nuget-packages are matching.
 - Run the following commands in the command-line:
-  - `cd [>>>>RootPathOfTheRepository<<<<]\src\BookSample.Aspire\BookSample.Aspire.AppHost`
+  - `cd ./src/BookSample.Aspire/BookSample.Aspire.AppHost`
   - `dotnet run`
 - After starting the Aspire AppHost, the following services are available:
   - **Aspire Dashboard**: [https://localhost:17054](https://localhost:17054)
