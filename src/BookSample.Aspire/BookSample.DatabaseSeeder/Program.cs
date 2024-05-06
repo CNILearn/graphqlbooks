@@ -38,8 +38,7 @@ var authorFaker = new Faker<Author>()
 var publisherFaker = new Faker<Publisher>()
     .RuleFor(x => x.Name, b => b.Company.CompanyName());
 
-var possibleGenres = new string[]
-{
+string[] possibleGenres = [
     "Fantasy",
     "Science Fiction",
     "Action & Adventure",
@@ -56,7 +55,7 @@ var possibleGenres = new string[]
     "Humor",
     "Science & Technology",
     "Parenting & Families"
-};
+];
 
 static string ToSnakeCase(string name) => name.Titleize().Underscore().ToLowerInvariant();
 var genreFaker = new Faker<Genre>()
